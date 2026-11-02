@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Space - Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-icon">⚡</div>
+                <h2>StudySpace</h2>
+            </div>
+            
+            <div class="stats-card">
+                <span class="stats-label">Task Overview</span>
+                <div class="stats-counter">
+                    <span id="completed-count">0</span> / <span id="total-count">0</span>
+                </div>
+                <p class="stats-subtext">Tasks completed</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="app-header">
+                <div>
+                    <h1>My Study Planner</h1>
+                    <p class="subtitle">Track assignments, revisions, and project tasks effortlessly.</p>
+                </div>
+            </header>
+
+            <section class="card form-card">
+                <h3>Add New Task</h3>
+                <form id="task-form">
+                    <div class="form-grid">
+                        <div class="input-field">
+                            <label for="task-title">Task Title</label>
+                            <input type="text" id="task-title" placeholder="e.g., Complete Chapter 3 Notes..." autocomplete="off">
+                        </div>
+                        <div class="input-field">
+                            <label for="task-subject">Subject / Course</label>
+                            <input type="text" id="task-subject" placeholder="e.g., Computer Science..." autocomplete="off">
+                        </div>
+                    </div>
+                    <button type="submit" id="add-btn">
+                        <span>+ Add Task</span>
+                    </button>
+                </form>
+                <div id="error-message" class="error-hidden">⚠️ Please enter a valid task title before saving.</div>
+            </section>
+
+            <section class="card list-card">
+                <div class="list-header">
+                    <h3>Your Task List</h3>
+                </div>
+
+                <div id="empty-state" class="empty-state">
+                    <div class="empty-icon">📝</div>
+                    <h4>No study tasks yet!</h4>
+                    <p>Add a task using the form above to get your study plan organized.</p>
+                </div>
+
+                <ul id="task-list" class="task-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
